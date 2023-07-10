@@ -1,0 +1,144 @@
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+}
+
+.cart-user {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.img-cart-user {
+  width: 100%;
+}
+
+.logo {
+  width: 40px;
+  padding-left: 1%;
+}
+
+.logo > img {
+  width: 100%;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+nav ul,
+.cart-user ul {
+  display: flex;
+  gap: 10px;
+}
+/* NAV Y CATEGORIES*/
+.hamburguer,
+nav label {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+nav a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+.cart-user li a:hover img {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-user {
+    width: 100vw;
+    z-index: -1;
+    margin-left: 2%;
+    margin-top: 5px;
+  }
+
+  #app {
+    margin-top: 50px;
+  }
+  .cart-user ul {
+    justify-content:left;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  .img-cart-user {
+    width: 25px;
+    align-self: flex-end;
+    justify-self: end;
+  }
+
+  nav label,
+  .hamburguer {
+    display: block;
+    position: fixed;
+    right: 1%;
+  }
+
+  nav label {
+    background-color: #fffffe;
+    border-radius: 0.2em;   
+  }
+
+  .hamburguer {
+    opacity: 0;
+    z-index: 99999999999;
+  }
+
+  nav ul {
+    display: none;
+    width: 100vw;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: var(--color-bg);
+    flex-direction: column;
+    align-items:center;
+    padding: 3%;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  nav input[type='checkbox']:checked + label + ul {
+    display: flex;
+    animation: fadeInAnimation ease 1s;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+  nav label {
+    font-size: 1.5em;
+    cursor: pointer;
+    top:0;
+  }
+}
