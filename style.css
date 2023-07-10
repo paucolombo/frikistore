@@ -50,6 +50,7 @@ body {
 }
 
 .product {
+  cursor: pointer;
   max-width: 20vw;
   min-width: 200px;
   height: auto;
